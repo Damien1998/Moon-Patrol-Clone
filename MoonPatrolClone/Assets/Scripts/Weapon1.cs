@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Weapon : MonoBehaviour
+public class Weapon1 : MonoBehaviour
 {
 
-    public Transform firePoint;
-    public GameObject bulletPrefab;
+    public Transform firePoint1;
+    public GameObject bulletPrefab1;
     // Update is called once per frame
     void Update()
     {
@@ -17,6 +17,6 @@ public class Weapon : MonoBehaviour
     }
     void Shoot()
     {
-        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        Instantiate(bulletPrefab1, firePoint1.position, firePoint1.rotation);
     }
 }
