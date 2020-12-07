@@ -5,18 +5,27 @@ using UnityEngine;
 public class Weapon1 : MonoBehaviour
 {
 
-    public Transform firePoint1;
-    public GameObject bulletPrefab1;
-    // Update is called once per frame
-    void Update()
+    public Transform FirePoint1;
+    public GameObject BulletPrefab1;
+
+    private float timeBtwShots;
+    public float startTimeBtwShoots;
+
+    private void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+
+        if (timeBtwShots <= 0)
         {
-            Shoot();
+            if (Input.GetMouseButtonDown(0))
+            {
+                Instantiate(BulletPrefab1, FirePoint1.position, transform.rotation);
+                timeBtwShots = startTimeBtwShoots;
+            }
         }
-    }
-    void Shoot()
-    {
-        Instantiate(bulletPrefab1, firePoint1.position, firePoint1.rotation);
+        else
+        {
+            timeBtwShots -= Time.deltaTime;
+        }
+
     }
 }
