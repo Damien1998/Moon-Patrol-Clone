@@ -2,35 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyWeapon : MonoBehaviour
+public class CreateObject : MonoBehaviour
 {
-    public Transform EnemyGun;
+    public Transform SpawnPoint;
     public GameObject Prefab;
 
     private float timeBtwShots;
     public float startTimeBtwShoots;
-
-    //private float timeBtwShots;
-    //public float startTimeBtwShoots;
-
     // Start is called before the first frame update
-    void OnTriggerEnter2d(Collider2D other)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (timeBtwShots <= 0)
         {
-            if (other.gameObject.tag == "Player")
-            {
-                Instantiate(Prefab, EnemyGun.position, transform.rotation);
-            }
+
+            Instantiate(Prefab, SpawnPoint.position, SpawnPoint.rotation);
+            timeBtwShots = startTimeBtwShoots;
         }
+
+
         else
         {
             timeBtwShots -= Time.deltaTime;
         }
-
-
+        
     }
-    
 }
-
-   

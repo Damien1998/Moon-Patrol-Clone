@@ -5,9 +5,12 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     Rigidbody2D rb2d;
+   
     public float moveSpeed = 5f;
     public float jumpHight = 5f;
     public bool isGrounded = false;
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +28,7 @@ public class Player : MonoBehaviour
         vel.z = movement.z;
         rb2d.velocity = vel;
         Jump();
+        
     }
     void Jump()
     {
@@ -33,4 +37,5 @@ public class Player : MonoBehaviour
             rb2d.AddForce(new Vector2(0f, jumpHight), ForceMode2D.Impulse);
         }
     }
+    
 }
