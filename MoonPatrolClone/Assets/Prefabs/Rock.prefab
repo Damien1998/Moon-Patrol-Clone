@@ -143,7 +143,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a2b36afb3542674986a6b6de25e2ef7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
 --- !u!114 &1812235438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,3 +155,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5d81671dfc408c4fbc513337495e848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  respawn: {fileID: 6285194151228611176, guid: 08920d94fbbc6d04dacba18adee16645, type: 3}

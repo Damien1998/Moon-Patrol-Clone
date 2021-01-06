@@ -30,7 +30,7 @@ public class Spawner : MonoBehaviour
         yield return new WaitForSeconds(startWait);
         while (!stop)
         {
-            randEnemy = Random.Range(0, 2);
+            randEnemy = Random.Range(0, 6);
             Vector3 spawnPosition = new Vector3(1, 1,0);
             Instantiate(enemies[randEnemy], spawnPosition + transform.TransformPoint(0,0, 0), gameObject.transform.rotation);
             yield return new WaitForSeconds(spawnWait);

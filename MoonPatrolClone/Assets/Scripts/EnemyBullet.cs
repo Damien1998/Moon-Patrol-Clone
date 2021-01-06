@@ -7,6 +7,7 @@ public class EnemyBullet : MonoBehaviour
     public Rigidbody2D rb;
     public LayerMask whatIsSolid;
     public float lifeTime;
+    public GameObject respawn;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,9 @@ public class EnemyBullet : MonoBehaviour
         {
             Destroy(other.gameObject);
             Destroy(this.gameObject);
+            Instantiate(respawn);
+            Lives.livesValue -= 1;
+            ProgresBar.fillSpeed = 0f;
         }
     }
 }

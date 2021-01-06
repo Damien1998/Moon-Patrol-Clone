@@ -4,21 +4,33 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public int health;
+    public static float currentTimeDeath = 0f;
+    public float startingTimeDeath = 0f;
 
-    private void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-      if (health <= 0)
+        if (collision.gameObject.tag.Equals("Bullet"))
         {
-            Destroy(gameObject);
+            ScoreScript.scoreValue += 1;
         }
     }
-
-    public void TakeDamage(int damage)
+    public void Start()
     {
-        health -= damage;
+        currentTimeDeath = startingTimeDeath;
+    }
+    public void Update()
+    {
+        currentTimeDeath += 1 * Time.deltaTime;
+        if (currentTimeDeath >= 8)
+        {
+            Destroy(this.gameObject);
+        }
+
     }
 
-       
+
+
+
 }
+
+

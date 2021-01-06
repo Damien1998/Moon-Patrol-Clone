@@ -149,3 +149,4 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   lifeTime: 0.6
+  respawn: {fileID: 6285194151228611176, guid: 08920d94fbbc6d04dacba18adee16645, type: 3}

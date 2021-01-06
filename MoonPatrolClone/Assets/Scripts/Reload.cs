@@ -1,15 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Reload : MonoBehaviour
 {
-  
-    void Update()
+    
+    public void Update()
     {
-       if (Input.GetKeyDown(KeyCode.R))
+       if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Application.LoadLevel(Application.loadedLevel);
+            //Application.LoadLevel(Application.loadedLevel);
+            ScoreScript.scoreValue = 0;
+            SceneManager.LoadScene("Menu");
         }
+       if (Input.GetKeyDown(KeyCode.R))
+       {
+            //Application.LoadLevel(Application.loadedLevel);
+           
+            SceneManager.LoadScene("Level0");
+       }
     }
+
 }

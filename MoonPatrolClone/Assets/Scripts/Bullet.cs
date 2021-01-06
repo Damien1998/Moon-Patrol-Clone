@@ -20,18 +20,7 @@ public class Bullet : MonoBehaviour
     }
     private void Update()
     {
-        //RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.right, distance);
-        //{
-        //    if (hitInfo.collider != null)
-        //    {
-        //        if (hitInfo.collider.CompareTag("Enemy"))
-        //        {
-        //            hitInfo.collider.GetComponent<Enemy>().TakeDamage(damage);
-        //            DestroyBullet();
-        //        }
-
-        //    }
-        //}
+       
     }
     void DestroyBullet()
     {
