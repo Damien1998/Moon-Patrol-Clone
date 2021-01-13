@@ -6,6 +6,8 @@ public class Spawner : MonoBehaviour
 {
     public GameObject[] enemies;
     public Vector3 spawnValues;
+    public int rangestart = 0;
+    public int rangeend = 6;
     public float spawnWait;
     public float spawnMostWait;
     public float spawnLeastWait;
@@ -30,7 +32,7 @@ public class Spawner : MonoBehaviour
         yield return new WaitForSeconds(startWait);
         while (!stop)
         {
-            randEnemy = Random.Range(0, 6);
+            randEnemy = Random.Range(rangestart, rangeend);
             Vector3 spawnPosition = new Vector3(1, 1,0);
             Instantiate(enemies[randEnemy], spawnPosition + transform.TransformPoint(0,0, 0), gameObject.transform.rotation);
             yield return new WaitForSeconds(spawnWait);

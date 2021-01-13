@@ -12,7 +12,7 @@ public class CountdownTimer : MonoBehaviour
 
     public void Start()
     {
-        currentTime = startingTime;
+        //currentTime = startingTime;
     }
     public void Update()
     {

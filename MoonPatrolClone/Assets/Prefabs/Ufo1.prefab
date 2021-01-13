@@ -143,6 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a2b36afb3542674986a6b6de25e2ef7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startingTimeDeath: 0
 --- !u!1 &5492452711482654354
 GameObject:
   m_ObjectHideFlags: 0
@@ -246,4 +247,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpawnPoint: {fileID: 5492452711482654353}
   Prefab: {fileID: 4475048875333718302, guid: 47785221be8112444801aaa71ee0525c, type: 3}
-  startTimeBtwShoots: 2
+  startTimeBtwShoots: 1

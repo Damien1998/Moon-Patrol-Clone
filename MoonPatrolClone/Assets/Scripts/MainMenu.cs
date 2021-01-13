@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public void playGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("Level0");
         Lives.livesValue = 3;
         ScoreScript.scoreValue = 0;
     }
@@ -17,7 +17,8 @@ public class MainMenu : MonoBehaviour
     }
     public void contineGame()
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        CountdownTimer.currentTime = 0f;
     }
 }
 

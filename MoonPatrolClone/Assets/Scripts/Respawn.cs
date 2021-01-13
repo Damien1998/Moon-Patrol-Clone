@@ -19,7 +19,7 @@ public class Respawn : MonoBehaviour
         currentTime += 1 * Time.deltaTime;
         if (currentTime >= 3)
         {
-            SceneManager.LoadScene("Level0");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             ProgresBar.fillSpeed = 1f;
         }
     }

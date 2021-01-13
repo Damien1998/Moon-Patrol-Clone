@@ -301,7 +301,7 @@ GameObject:
   - component: {fileID: 221028023}
   - component: {fileID: 221028022}
   m_Layer: 0
-  m_Name: Spawner
+  m_Name: Spawner2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -332,8 +332,8 @@ MonoBehaviour:
   rangestart: 0
   rangeend: 8
   spawnWait: 0
-  spawnMostWait: 4
-  spawnLeastWait: 2
+  spawnMostWait: 1.5
+  spawnLeastWait: 1.5
   startWait: 1
   stop: 0
 --- !u!4 &221028023

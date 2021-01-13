@@ -247,4 +247,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpawnPoint: {fileID: 5492452711482654353}
   Prefab: {fileID: 4475048875333718302, guid: 47785221be8112444801aaa71ee0525c, type: 3}
-  startTimeBtwShoots: 2
+  startTimeBtwShoots: 1

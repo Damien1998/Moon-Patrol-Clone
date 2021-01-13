@@ -14,12 +14,7 @@ public class Reload : MonoBehaviour
             ScoreScript.scoreValue = 0;
             SceneManager.LoadScene("Menu");
         }
-       if (Input.GetKeyDown(KeyCode.R))
-       {
-            //Application.LoadLevel(Application.loadedLevel);
-           
-            SceneManager.LoadScene("Level0");
-       }
+      
     }
 
 }

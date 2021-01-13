@@ -8,8 +8,10 @@ public class ProgresBar : MonoBehaviour
 {
     private Slider slider;
 
-    public static float fillSpeed = 0.1f;
-    private float targetProgress = 0;
+    public static float fillSpeed = 1f;
+    public int bonustime = 10;
+    private float targetProgress = 0f;
+    public float IncrementProgressValue = 15f;
 
     private void Awake()
     {
@@ -18,7 +20,7 @@ public class ProgresBar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        IncrementProgress(5f);
+        IncrementProgress(IncrementProgressValue);
     }
 
     // Update is called once per frame
@@ -26,13 +28,13 @@ public class ProgresBar : MonoBehaviour
     {
         if (slider.value < targetProgress)
             slider.value += fillSpeed * Time.deltaTime;
-        if (slider.value >= 5)
+        if (slider.value >= IncrementProgressValue)
         {
  
-            SceneManager.LoadScene("Level0Breake");
-            if (CountdownTimer.currentTime <= 10)
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            if (CountdownTimer.currentTime <= bonustime)
             {
-                ScoreScript.scoreValue += 10;
+                ScoreScript.scoreValue += 30;
             }
 
         }
