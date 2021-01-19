@@ -989,7 +989,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 120
+  m_MaxValue: 30
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -1007,8 +1007,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7594371054b643745aecbc3ccfb227d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bonustime: 125
-  IncrementProgressValue: 120
+  bonustime: 33
+  IncrementProgressValue: 30
 --- !u!1 &905288888
 GameObject:
   m_ObjectHideFlags: 0
@@ -1534,11 +1534,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8509085332405257645, guid: 2ee8d4356576e284d9fc4728e150e307, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.66
+      value: -1.21
       objectReference: {fileID: 0}
     - target: {fileID: 8509085332405257645, guid: 2ee8d4356576e284d9fc4728e150e307, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.71
+      value: -0.449
       objectReference: {fileID: 0}
     - target: {fileID: 8509085332405257645, guid: 2ee8d4356576e284d9fc4728e150e307, type: 3}
       propertyPath: m_LocalPosition.z
